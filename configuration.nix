@@ -2,6 +2,8 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./systempkgs.nix
+#    ./diskoteka.nix
   ];
 
   boot.loader = {
@@ -33,12 +35,6 @@
       ];
     };
   };
-
-  environment.systemPackages = with pkgs; [
-    helix
-    git
-    keychain
-  ];
 
   system.stateVersion = "25.05"; #change it!
 }
